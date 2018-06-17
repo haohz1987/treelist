@@ -48,19 +48,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void initDatas(){
 //        mDatas.add(new Node("1", "-1", "文件管理系统"));//第二个参数表示指向第一个参数的位置
-        mDatas.add(new Node(2+"", 1+"", "外层列表1-序号1"));
-        mDatas.add(new Node(3+"", 1+"", "外层列表1-序号2"));
-        mDatas.add(new Node(4+"", 1+"", "外层列表1-序号3"));
-
-        mDatas.add(new Node(5+"", 2+"", "外层列表2-序号4"));
-        mDatas.add(new Node(6+"", 2+"", "外层列表2-序号5"));
-
-        mDatas.add(new Node(7+"", 4+"", "外层列表2-序号6"));
-        mDatas.add(new Node(8+"", 4+"", "外层列表2-序号7"));
-
-        mDatas.add(new Node(9+"", 7+"", "列表3-序号8"));
-        mDatas.add(new Node(10+"", 7+"", "列表3-序号9"));
-
+        mDatas.add(new Node(2+"", 1+"", "外层列表1"));
+        mDatas.add(new Node(3+"", 1+"", "外层列表1"));
+        mDatas.add(new Node(4+"", 1+"", "外层列表1"));
+        for (int i=0;i<5;i++){
+            mDatas.add(new Node(i+5+"", 2+"", "外层列表2-序号"+i));
+        }
+        for (int i=0;i<5;i++){
+            mDatas.add(new Node(i+10+"", 3+"", "外层列表2-序号"+(i+5)));
+        }
+        for (int i=0;i<5;i++){
+            mDatas.add(new Node(i+15+"", 4+"", "外层列表2-序号"+(i+10)));
+        }
     }
-
 }
